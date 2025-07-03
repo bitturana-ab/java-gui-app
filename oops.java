@@ -15,10 +15,21 @@ class Phone {
 class Samsung extends Phone {
     private String model;
 
+    /**
+     * Sets the model of the Samsung phone.
+     * 
+     * @param model
+     */
     public void setModel(String model) {
         this.model = model;
     }
 
+    /**
+     * Gets the model of the Samsung phone.
+     * 
+     * @return
+     */
+    // the above comments is called composition it's used in object for info
     public String getModel() {
         return model;
     }
@@ -27,11 +38,22 @@ class Samsung extends Phone {
 class Iphone extends Phone {
     private String model;
 
+    /**
+     * passes two params String:model and int:camera
+     * 
+     * @param model
+     * @param camera
+     */
     Iphone(String model, int camera) {
         this.model = model;
         super.setCamera(camera);
     }
 
+    /**
+     * Sets the model of the iPhone.
+     * 
+     * @param model
+     */
     public void setModel(String model) {
         this.model = model;
     }
