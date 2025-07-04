@@ -313,11 +313,16 @@ public class ManageContact {
     }
 
     private static void showContacts() {
+        if (contacts.size() == 0) {
+            System.out.println("No contacts found.");
+            System.out.println("-------------------");
+            showIntialOptions();
+            return;
+        }
         for (Contact c : contacts) {
             c.getDetails();
             System.out.println("-------------------");
         }
-        System.out.println("-------------------");
         showIntialOptions();
     }
 }
