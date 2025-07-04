@@ -162,7 +162,7 @@ public class ManageContact {
             if (c.getName().equals(name) || c.getNumber().equals(name)) {
                 found = true;
                 System.out.println("Enter your message: ");
-                String messageText = sc.nextLine();
+                String messageText = sc.next();
                 if (messageText.equals("")) {
                     System.out.println("Please enter a valid message.");
                     sendNewMessage();
@@ -178,14 +178,19 @@ public class ManageContact {
                             // current.setMessages(newMessages);
                             // contacts.remove(c);
                             // contacts.add(current);
+                            System.out.println("----------------------");
                             System.out.println("Message sent successfully to: " + cn.getName());
+                            System.out.println("----------------------");
                         }
                     }
                 }
             }
         }
-        if (!found)
+        if (!found) {
+            System.out.println("-------------------------------------------------------");
             System.out.println("No any contact found with the name or number: " + name);
+            System.out.println("-------------------------------------------------------");
+        }
         showIntialOptions();
     }
 
@@ -312,6 +317,7 @@ public class ManageContact {
             c.getDetails();
             System.out.println("-------------------");
         }
+        System.out.println("-------------------");
         showIntialOptions();
     }
 }
